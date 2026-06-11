@@ -1,35 +1,135 @@
 <!DOCTYPE html>
-<html>
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Curriculo Kevin Dias</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="style.css">
-      </head>
-      <body>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="index.html">
-                Home
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contato e pré-agendamento da Barbearia Amigos da Fé.">
+    <title>Contato | Amigos da Fé</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="contact-page">
+    <nav class="navbar is-fixed-top app-navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item brand" href="./index.html" aria-label="Amigos da Fé Home">
+            <span class="brand-mark">AF</span>
+            <span>Amigos da Fé</span>
+          </a>
+        </div>
+        <div class="navbar-menu is-active">
+          <div class="navbar-end">
+            <a class="navbar-item" href="./index.html#agendamento">Agendamento</a>
+            <a class="navbar-item" href="./index.html#dashboard">Dashboard</a>
+            <a class="navbar-item button is-warning is-rounded" href="https://wa.me/5511916835829">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section contact-hero">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-6">
+            <span class="eyebrow">Atendimento rápido</span>
+            <h1 class="title hero-title">Reserve seu corte na Amigos da Fé.</h1>
+            <p class="subtitle hero-copy">
+              Envie seu melhor horário, escolha o serviço e receba confirmação pelo WhatsApp. Se preferir, fale direto com a equipe.
+            </p>
+
+            <div class="contact-methods">
+              <a class="contact-method" href="https://wa.me/5511916835829">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>(11) 91683-5829</span>
+                </div>
+              </a>
+              <a class="contact-method" href="mailto:contato@amigosdafe.com.br">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>E-mail</strong>
+                  <span>contato@amigosdafe.com.br</span>
+                </div>
+              </a>
+              <a class="contact-method" href="https://www.instagram.com/kvn.dias/">
+                <i class="fab fa-instagram"></i>
+                <div>
+                  <strong>Instagram</strong>
+                  <span>@amigosdafe.barber</span>
+                </div>
               </a>
             </div>
-          </nav>
-          <div class="card">
-            <div class="card-content">
-              <div class="content">
-                <p>
-                  <h3><strong>Contatos</strong></h3>
-                </p>
-                <hr>
-                <p><strong>WhatsApp:</strong> (11) 9 1683-5829 ou Clique <a href="https://wa.me/qr/JL42U74WSCSSN1">Aqui.</a></p>
-                <p><strong>E-mail:</strong> kevin.alves_dias@outlook.com</p>
-                <p><strong>Linkedin:</strong> <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAC3IC1YBDJ2eKHIL2qd-EhqdpFYVYJbfEVg&keywords=k%C3%A9vin%20alves%20dias&origin=RICH_QUERY_SUGGESTION&position=0&searchId=f12c12f6-2930-46ea-979e-77abd792210f&sid=p.Y">Kévin Alves Dias</a></p>
-                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kvn.dias/">kvn.dias</a></p>
+          </div>
+
+          <div class="column is-5 is-offset-1">
+            <form class="booking-card contact-form" action="mailto:contato@amigosdafe.com.br" method="post" enctype="text/plain">
+              <h2 class="title is-4">Pré-agendamento</h2>
+
+              <label class="label" for="nome">Nome completo</label>
+              <input class="input" id="nome" name="Nome" type="text" placeholder="Seu nome" required>
+
+              <label class="label" for="telefone">WhatsApp</label>
+              <input class="input" id="telefone" name="WhatsApp" type="tel" placeholder="(11) 90000-0000" required>
+
+              <label class="label" for="origem">Como conheceu?</label>
+              <div class="select is-fullwidth">
+                <select id="origem" name="Origem do lead">
+                  <option>Instagram</option>
+                  <option>Google</option>
+                  <option>Indicação de amigo</option>
+                  <option>Passando em frente</option>
+                </select>
               </div>
+
+              <label class="label" for="servico">Serviço desejado</label>
+              <div class="select is-fullwidth">
+                <select id="servico" name="Serviço">
+                  <option>Corte</option>
+                  <option>Barba</option>
+                  <option>Corte + barba</option>
+                  <option>Plano recorrente</option>
+                </select>
+              </div>
+
+              <label class="label" for="mensagem">Observação</label>
+              <textarea class="textarea" id="mensagem" name="Observação" placeholder="Ex: prefiro atendimento no sábado pela manhã"></textarea>
+
+              <button class="button is-warning is-fullwidth is-medium" type="submit">Enviar solicitação</button>
+              <p class="form-note">A equipe confirma o horário conforme disponibilidade da agenda.</p>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">Horários sugeridos</span>
+            <h2 class="title is-4">Agenda comercial</h2>
+          </div>
+          <div class="schedule-grid">
+            <div>
+              <strong>Segunda a sexta</strong>
+              <span>09h às 20h</span>
+            </div>
+            <div>
+              <strong>Sábado</strong>
+              <span>08h às 18h</span>
+            </div>
+            <div>
+              <strong>Planos mensais</strong>
+              <span>4 cortes com prioridade na agenda</span>
             </div>
           </div>
-      </body>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer app-footer">
+      <div class="container">
+        <p><strong>Amigos da Fé</strong> - atendimento, agendamento e relacionamento com clientes.</p>
+      </div>
+    </footer>
+  </body>
 </html>

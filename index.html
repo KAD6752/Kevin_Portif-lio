@@ -1,108 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Curriculo Kevin Dias</title>
+    <meta name="description" content="Plataforma de agendamento, leads e recorrência para a Barbearia Amigos da Fé.">
+    <title>Amigos da Fé | Plataforma de Agendamento</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar is-transparent">
-        <div class="navbar-start">
-          <a class="navbar-item" href="./index.html">
-            Home
+    <nav class="navbar is-fixed-top app-navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item brand" href="./index.html" aria-label="Amigos da Fé Home">
+            <span class="brand-mark">AF</span>
+            <span>Amigos da Fé</span>
           </a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-item" href="./contact.html">
-            Contact
-            </a>
+        </div>
+        <div class="navbar-menu is-active">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#agendamento">Agendamento</a>
+            <a class="navbar-item" href="#recorrencia">Recorrência</a>
+            <a class="navbar-item" href="#dashboard">Dashboard</a>
+            <a class="navbar-item button is-warning is-rounded" href="./contact.html">Falar com a barbearia</a>
+          </div>
         </div>
       </div>
     </nav>
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="./img/WhatsApp Image 2023-03-31 at 14.03.52.jpeg" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4"><STRONg>KÉVIN ALVES DIAS</STRONg></p>
-                  <span class="tag is-dark">WebStack Developer</span>
-                  <p class="subtitle is-6">@kevin.alves_dias</p>
-                  <hr>
+
+    <main>
+      <section class="hero is-fullheight-with-navbar hero-barber">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-vcentered">
+              <div class="column is-6">
+                <span class="eyebrow">Agenda inteligente para barbearias</span>
+                <h1 class="title hero-title">Mais horários preenchidos para a Barbearia Amigos da Fé.</h1>
+                <p class="subtitle hero-copy">
+                  Um sistema simples para captar clientes, confirmar cortes pelo WhatsApp e acompanhar a frequência da freguesia mês a mês.
+                </p>
+                <div class="hero-actions">
+                  <a class="button is-warning is-medium is-rounded" href="#agendamento">Agendar corte</a>
+                  <a class="button is-light is-medium is-rounded is-outlined" href="#dashboard">Ver desempenho</a>
+                </div>
+                <div class="trust-list" aria-label="Recursos principais">
+                  <span><i class="fas fa-check-circle"></i> Leads organizados</span>
+                  <span><i class="fas fa-check-circle"></i> Retorno automático</span>
+                  <span><i class="fas fa-check-circle"></i> Métricas por barbeiro</span>
                 </div>
               </div>
-          
-              <div class="content">
-                "A distância entre o sonho e a realidade chama-se disciplina.</a>
-                <br>
+
+              <div class="column is-5 is-offset-1">
+                <div class="phone-card" aria-label="Resumo da agenda do dia">
+                  <div class="phone-card-header">
+                    <span>Hoje na agenda</span>
+                    <strong>18 cortes</strong>
+                  </div>
+                  <div class="appointment-item active">
+                    <div>
+                      <strong>09:30 - Corte + barba</strong>
+                      <small>Cliente: Rafael Santos</small>
+                    </div>
+                    <span>Confirmado</span>
+                  </div>
+                  <div class="appointment-item">
+                    <div>
+                      <strong>11:00 - Degradê</strong>
+                      <small>Cliente novo via Instagram</small>
+                    </div>
+                    <span>Novo lead</span>
+                  </div>
+                  <div class="appointment-item">
+                    <div>
+                      <strong>14:30 - Plano mensal</strong>
+                      <small>Cliente recorrente: Bruno Lima</small>
+                    </div>
+                    <span>Recorrente</span>
+                  </div>
+                  <div class="mini-chart">
+                    <div style="height: 48%"></div>
+                    <div style="height: 72%"></div>
+                    <div style="height: 56%"></div>
+                    <div style="height: 88%"></div>
+                    <div style="height: 66%"></div>
+                    <div style="height: 92%"></div>
+                  </div>
+                  <p class="chart-caption">Taxa de ocupação semanal: <strong>82%</strong></p>
+                </div>
               </div>
             </div>
-          </div>        
+          </div>
         </div>
-      </div>
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child box">
-                <p><strong>SOBRE MIM</strong></p>
-                <hr>
-                <p>Morador do norte da grande São Paulo na Vila Brasilândia, sonho em realizar grandes feitos no ramo da tecnologia.</p>
-              </article>
-              <article class="tile is-child box">
-                <p><strong>EXPERIÊNCIAS PROFISSIONAIS</strong></p>
-                <hr>
-                <h3><strong>Aux. Administrativo - Emaxe</strong></h3>
+      </section>
+
+      <section class="section section-light">
+        <div class="container">
+          <div class="columns has-text-centered stats-grid">
+            <div class="column">
+              <strong>248</strong>
+              <span>clientes cadastrados</span>
+            </div>
+            <div class="column">
+              <strong>64%</strong>
+              <span>retorno em até 30 dias</span>
+            </div>
+            <div class="column">
+              <strong>37</strong>
+              <span>leads do mês</span>
+            </div>
+            <div class="column">
+              <strong>4.8</strong>
+              <span>avaliação média</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="agendamento" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Captação de leads</span>
+            <h2 class="title">Agendamento sem perder cliente no caminho.</h2>
+            <p>
+              O cliente escolhe serviço, barbeiro e melhor horário. A equipe recebe os dados para confirmar no WhatsApp e transformar o primeiro corte em relacionamento.
+            </p>
+          </div>
+
+          <div class="columns">
+            <div class="column is-7">
+              <div class="feature-grid">
+                <article class="feature-card">
+                  <i class="fas fa-calendar-check"></i>
+                  <h3>Agenda por profissional</h3>
+                  <p>Horários separados para cada barbeiro, evitando conflitos e facilitando encaixes.</p>
+                </article>
+                <article class="feature-card">
+                  <i class="fas fa-user-plus"></i>
+                  <h3>Cadastro de leads</h3>
+                  <p>Nome, telefone, origem e serviço de interesse ficam prontos para atendimento comercial.</p>
+                </article>
+                <article class="feature-card">
+                  <i class="fab fa-whatsapp"></i>
+                  <h3>Confirmação rápida</h3>
+                  <p>Chamada direta para WhatsApp com contexto do pedido e redução de faltas.</p>
+                </article>
+                <article class="feature-card">
+                  <i class="fas fa-star"></i>
+                  <h3>Histórico do cliente</h3>
+                  <p>Frequência, serviço favorito e último atendimento ajudam a personalizar o retorno.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="column is-5">
+              <form class="booking-card" action="mailto:contato@amigosdafe.com.br" method="post" enctype="text/plain">
+                <h3 class="title is-4">Solicitar horário</h3>
+                <label class="label" for="nome">Nome do cliente</label>
+                <input class="input" id="nome" name="Nome" type="text" placeholder="Ex: João Pedro" required>
+
+                <label class="label" for="telefone">WhatsApp</label>
+                <input class="input" id="telefone" name="WhatsApp" type="tel" placeholder="(11) 90000-0000" required>
+
+                <label class="label" for="servico">Serviço</label>
+                <div class="select is-fullwidth">
+                  <select id="servico" name="Serviço">
+                    <option>Corte masculino</option>
+                    <option>Corte + barba</option>
+                    <option>Barba completa</option>
+                    <option>Plano mensal</option>
+                  </select>
+                </div>
+
+                <label class="label" for="barbeiro">Barbeiro preferido</label>
+                <div class="select is-fullwidth">
+                  <select id="barbeiro" name="Barbeiro">
+                    <option>Qualquer profissional disponível</option>
+                    <option>André</option>
+                    <option>Diego</option>
+                    <option>Marcos</option>
+                  </select>
+                </div>
+
+                <label class="label" for="data">Melhor dia e horário</label>
+                <input class="input" id="data" name="Dia e horário" type="datetime-local">
+
+                <button class="button is-warning is-fullwidth is-medium" type="submit">Enviar pedido</button>
+                <p class="form-note">Demonstração estática: em produção, estes dados alimentam CRM e agenda.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recorrencia" class="section section-dark">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-5">
+              <span class="eyebrow">Freguesia recorrente</span>
+              <h2 class="title">O retorno do cliente vira processo, não sorte.</h2>
+              <p>
+                A barbearia enxerga quem está voltando, quem sumiu e quem pode receber convite para pacote mensal. Assim a agenda fica previsível e o relacionamento melhora.
+              </p>
+            </div>
+            <div class="column is-6 is-offset-1">
+              <div class="recurrence-list">
+                <div class="recurrence-item">
+                  <span>01</span>
+                  <div>
+                    <strong>Segmentação por frequência</strong>
+                    <p>Clientes novos, ativos, recorrentes e inativos organizados em etapas claras.</p>
+                  </div>
+                </div>
+                <div class="recurrence-item">
+                  <span>02</span>
+                  <div>
+                    <strong>Lembretes de retorno</strong>
+                    <p>Alertas para chamar clientes que costumam cortar a cada 15, 20 ou 30 dias.</p>
+                  </div>
+                </div>
+                <div class="recurrence-item">
+                  <span>03</span>
+                  <div>
+                    <strong>Campanhas de fidelização</strong>
+                    <p>Cupons, plano mensal e mensagens de aniversário em um fluxo simples.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Dashboard dos barbeiros</span>
+            <h2 class="title">Desempenho mensal e frequência de clientes por profissional.</h2>
+            <p>
+              Cada barbeiro acompanha atendimentos, faturamento estimado, retorno de clientes e ocupação da própria agenda.
+            </p>
+          </div>
+
+          <div class="columns">
+            <div class="column">
+              <article class="barber-card highlight">
+                <div class="barber-card-header">
+                  <div>
+                    <span>Barbeiro</span>
+                    <h3>André</h3>
+                  </div>
+                  <strong>R$ 6.850</strong>
+                </div>
+                <progress class="progress is-warning" value="86" max="100">86%</progress>
                 <ul>
-                  <li>
-                    <p>OUT/2022 - MAI/2023</p>
-                  </li>
+                  <li><span>Atendimentos no mês</span><strong>137</strong></li>
+                  <li><span>Clientes recorrentes</span><strong>74%</strong></li>
+                  <li><span>Reagendamentos feitos</span><strong>42</strong></li>
                 </ul>
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p><strong>HABILIDADES TÉCNICAS</strong></p>
-                <hr>
-                <h3><strong>Programação</strong></h3>
+            <div class="column">
+              <article class="barber-card">
+                <div class="barber-card-header">
+                  <div>
+                    <span>Barbeiro</span>
+                    <h3>Diego</h3>
+                  </div>
+                  <strong>R$ 5.420</strong>
+                </div>
+                <progress class="progress is-warning" value="72" max="100">72%</progress>
                 <ul>
-                  <li>HTML5.</li>
-                  <li>CSS.</li>
-                  <li>Framework CSS - Bulma (básico).</li>
-                  <li>Github (básico).</li>
+                  <li><span>Atendimentos no mês</span><strong>109</strong></li>
+                  <li><span>Clientes recorrentes</span><strong>61%</strong></li>
+                  <li><span>Reagendamentos feitos</span><strong>31</strong></li>
                 </ul>
-
-                <h3><strong>Design Gráfico</strong></h3>
+              </article>
+            </div>
+            <div class="column">
+              <article class="barber-card">
+                <div class="barber-card-header">
+                  <div>
+                    <span>Barbeiro</span>
+                    <h3>Marcos</h3>
+                  </div>
+                  <strong>R$ 4.980</strong>
+                </div>
+                <progress class="progress is-warning" value="68" max="100">68%</progress>
                 <ul>
-                  <li>Photoshop & Illustrator.</li>
-                </ul>
-
-                <h3><strong>Eletricista de Audiovisual</strong></h3>
-                <ul>
-                  <li>Fotografia & Filmes.</li>
-                </ul>
-                
-                <h3><strong>Administrativo</strong></h3>
-                <ul>
-                  <li>Gestão.</li>
-                </ul>
-
-                <h3><strong>Comercial</strong></h3>
-                <ul>
-                  <li>Vendas.</li>
-                  <li>Telemarketing - Ativo.</li>
+                  <li><span>Atendimentos no mês</span><strong>96</strong></li>
+                  <li><span>Clientes recorrentes</span><strong>58%</strong></li>
+                  <li><span>Reagendamentos feitos</span><strong>26</strong></li>
                 </ul>
               </article>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container">
+          <div class="cta-card">
+            <div>
+              <span class="eyebrow">Próximo passo</span>
+              <h2 class="title">Quer reservar um horário ou testar a plataforma?</h2>
+              <p>Fale com a Amigos da Fé e receba atendimento para corte, barba ou plano mensal.</p>
+            </div>
+            <a class="button is-warning is-large is-rounded" href="./contact.html">Entrar em contato</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer app-footer">
+      <div class="container">
+        <p><strong>Amigos da Fé</strong> - agenda, leads e recorrência para barbearias.</p>
+        <p class="footer-credit">Projeto desenvolvido a partir do portfólio de Kévin Alves Dias.</p>
       </div>
+    </footer>
   </body>
 </html>
