@@ -1,0 +1,586 @@
+:root {
+  --bg: #0f0f10;
+  --bg-soft: #17171a;
+  --card: #ffffff;
+  --card-muted: #f5f1e8;
+  --gold: #f4b942;
+  --gold-dark: #c98716;
+  --ink: #141414;
+  --muted: #6d6d72;
+  --line: rgba(255, 255, 255, 0.12);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fbf8f1;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-navbar {
+  background: rgba(15, 15, 16, 0.95);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.app-navbar .navbar-item,
+.app-navbar .navbar-link {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.app-navbar .navbar-item:hover,
+.app-navbar .navbar-link:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.app-navbar .button {
+  color: var(--ink);
+  margin-left: 0.75rem;
+}
+
+.brand {
+  gap: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  align-items: center;
+  background: var(--gold);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-weight: 900;
+  height: 2.4rem;
+  justify-content: center;
+  width: 2.4rem;
+}
+
+.hero-barber {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(244, 185, 66, 0.24), transparent 30%),
+    linear-gradient(135deg, rgba(15, 15, 16, 0.96), rgba(29, 24, 17, 0.92)),
+    url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1600&q=80") center/cover;
+  color: #ffffff;
+  padding-top: 4rem;
+}
+
+.hero-title {
+  color: inherit;
+  font-size: clamp(2.6rem, 6vw, 5.3rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  margin-top: 1rem;
+}
+
+.hero-copy {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.18rem;
+  line-height: 1.65;
+  max-width: 43rem;
+}
+
+.eyebrow {
+  color: var(--gold);
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.button.is-warning {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.button.is-warning:hover {
+  background: #ffd36a;
+  border-color: #ffd36a;
+  color: var(--ink);
+}
+
+.trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.trust-list span {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.82);
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.trust-list svg {
+  color: var(--gold);
+}
+
+.phone-card,
+.booking-card,
+.feature-card,
+.barber-card,
+.cta-card,
+.contact-panel {
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.phone-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--ink);
+  padding: 1.4rem;
+}
+
+.phone-card-header,
+.barber-card-header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.phone-card-header span,
+.barber-card-header span {
+  color: var(--muted);
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.phone-card-header strong,
+.barber-card-header strong {
+  color: var(--gold-dark);
+  font-size: 1.35rem;
+}
+
+.appointment-item {
+  align-items: center;
+  background: #f8f4ea;
+  border: 1px solid rgba(20, 20, 20, 0.06);
+  border-radius: 18px;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+  padding: 1rem;
+}
+
+.appointment-item.active {
+  background: #17171a;
+  color: #ffffff;
+}
+
+.appointment-item small {
+  color: inherit;
+  display: block;
+  opacity: 0.65;
+}
+
+.appointment-item > span {
+  background: rgba(244, 185, 66, 0.22);
+  border-radius: 999px;
+  color: var(--gold-dark);
+  font-size: 0.76rem;
+  font-weight: 900;
+  padding: 0.35rem 0.6rem;
+  white-space: nowrap;
+}
+
+.appointment-item.active > span {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.mini-chart {
+  align-items: end;
+  background: #f7f0df;
+  border-radius: 20px;
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(6, 1fr);
+  height: 150px;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.mini-chart div {
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+  border-radius: 999px 999px 6px 6px;
+}
+
+.chart-caption,
+.form-note,
+.footer-credit {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.section {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.section-light {
+  background: #ffffff;
+  padding-bottom: 2.6rem;
+  padding-top: 2.6rem;
+}
+
+.stats-grid strong {
+  color: var(--gold-dark);
+  display: block;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.stats-grid span {
+  color: var(--muted);
+  display: block;
+  font-weight: 700;
+  margin-top: 0.45rem;
+}
+
+.section-heading {
+  margin-bottom: 3rem;
+  max-width: 760px;
+}
+
+.section-heading .title,
+.section-dark .title,
+.cta-card .title {
+  letter-spacing: -0.04em;
+}
+
+.section-heading p,
+.section-dark p,
+.cta-card p {
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid rgba(20, 20, 20, 0.06);
+  padding: 1.5rem;
+}
+
+.feature-card svg {
+  color: var(--gold-dark);
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.feature-card h3,
+.recurrence-item strong {
+  font-size: 1.12rem;
+}
+
+.feature-card p,
+.recurrence-item p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.booking-card {
+  background: #ffffff;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  padding: 2rem;
+}
+
+.booking-card .label {
+  color: var(--ink);
+  margin-top: 1rem;
+}
+
+.booking-card .input,
+.booking-card .select select,
+.booking-card .textarea {
+  border-color: #e7dfcf;
+  box-shadow: none;
+}
+
+.booking-card button {
+  margin-top: 1.5rem;
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(244, 185, 66, 0.16), transparent 28%),
+    var(--bg);
+  color: #ffffff;
+}
+
+.section-dark .title {
+  color: #ffffff;
+}
+
+.section-dark p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.recurrence-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.recurrence-item {
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.recurrence-item span {
+  align-items: center;
+  background: var(--gold);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  flex: 0 0 2.6rem;
+  font-weight: 900;
+  height: 2.6rem;
+  justify-content: center;
+}
+
+.barber-card {
+  background: #ffffff;
+  border: 1px solid rgba(20, 20, 20, 0.07);
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.barber-card.highlight {
+  background: #17171a;
+  color: #ffffff;
+}
+
+.barber-card h3 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.barber-card ul {
+  margin-top: 1.4rem;
+}
+
+.barber-card li {
+  align-items: center;
+  border-top: 1px solid rgba(20, 20, 20, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+}
+
+.barber-card.highlight li {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.barber-card li span {
+  color: var(--muted);
+}
+
+.barber-card.highlight li span {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.progress.is-warning::-webkit-progress-value {
+  background-color: var(--gold);
+}
+
+.progress.is-warning::-moz-progress-bar {
+  background-color: var(--gold);
+}
+
+.cta-section {
+  background: #ffffff;
+}
+
+.cta-card {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(15, 15, 16, 0.94), rgba(38, 30, 17, 0.92)),
+    url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=80") center/cover;
+  color: #ffffff;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+.cta-card .title {
+  color: #ffffff;
+}
+
+.cta-card p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.app-footer {
+  background: var(--bg);
+  color: rgba(255, 255, 255, 0.74);
+  padding: 2.5rem 1.5rem;
+}
+
+.app-footer strong {
+  color: #ffffff;
+}
+
+.contact-page {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(244, 185, 66, 0.18), transparent 26%),
+    #fbf8f1;
+}
+
+.contact-hero {
+  padding-top: 9rem;
+}
+
+.contact-hero .hero-title {
+  color: var(--ink);
+}
+
+.contact-hero .hero-copy {
+  color: var(--muted);
+}
+
+.contact-methods {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-method {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(20, 20, 20, 0.07);
+  border-radius: 20px;
+  color: var(--ink);
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-method:hover {
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.contact-method svg {
+  color: var(--gold-dark);
+  font-size: 1.5rem;
+}
+
+.contact-method span {
+  color: var(--muted);
+  display: block;
+}
+
+.contact-panel {
+  background: #ffffff;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.schedule-grid div {
+  background: var(--card-muted);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.schedule-grid span {
+  color: var(--muted);
+  display: block;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 1023px) {
+  .app-navbar .navbar-menu {
+    background: transparent;
+    box-shadow: none;
+    display: block;
+  }
+
+  .app-navbar .navbar-end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .app-navbar .button {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-barber {
+    padding-top: 7rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .feature-grid,
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-card,
+  .phone-card-header,
+  .barber-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .appointment-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .contact-hero {
+    padding-top: 8rem;
+  }
+}
